@@ -32,7 +32,7 @@ window.sendWhats = sendWhats;
 const chatAnswers = {
   precios: `<strong>💰 Planes mensuales</strong><br>• Inscripción: $500<br>• 12 clases por mes: $899<br>• Mensualidad completa: $1100<br>• Entrenamiento personalizado: $2500`,
   horarios: `<strong>🕒 Horarios</strong><br>• Lunes a viernes: 7:00 AM a 10:00 PM<br>• Sábados y domingos: 8:00 AM a 12:00 PM`,
-  torneo: `<strong>🏆 Torneo Debut</strong><br>• Fecha: 4 de julio<br>• Pesaje: 8:00 a 9:00 AM<br>• Inicio: 10:00 AM<br>• Público: $150<br>• Participación: $150`,
+  torneo: `<strong>🏆 Torneo Debut</strong><br>• Fecha: 12 de septiembre 2026<br>• Pesaje: 4:00 PM<br>• Inicio: 06:00 PM<br>• Público: $100 Prev. $150 taquilla<br>• Participación: $200`,
   personalizado: `<strong>🥊 Entrenamiento personalizado</strong><br>Entrena con tu coach, mejora combinaciones en manoplas y recibe atención directa. Costo: $2500.`,
   ubicacion: `<strong>📍 Ubicación</strong><br>Calz. de las Bombas 294, Coapa, Jardines de Coyoacán, Coyoacán, 04890 Ciudad de México, CDMX<br>También puedes tocar “Cómo llegar” para abrir Google Maps.`
 };
