@@ -56,3 +56,40 @@ document.querySelectorAll('.media-grid video').forEach(video => {
   video.addEventListener('mouseenter', () => video.play().catch(() => {}));
   video.addEventListener('mouseleave', () => video.pause());
 });
+
+// =============================================
+// CONTADOR DE VISITAS - BOXING MACHINE
+// =============================================
+
+async function registrarVisita() {
+  const contador = document.getElementById('visitCount');
+
+  if (!contador) return;
+
+  try {
+    const respuesta = await fetch(
+      'https://boxing-machine-counter.sanmo-raul1897.workers.dev/',
+      {
+        method: 'GET',
+        cache: 'no-store'
+      }
+    );
+
+    if (!respuesta.ok) {
+      throw new Error('No se pudo obtener el contador');
+    }
+
+    const datos = await respuesta.json();
+    const numero = Number(datos.visitas);
+
+    contador.textContent = numero
+      .toString()
+      .padStart(6, '0');
+
+  } catch (error) {
+    console.error('Error al cargar visitas:', error);
+    contador.textContent = '------';
+  }
+}
+
+registrarVisita();
