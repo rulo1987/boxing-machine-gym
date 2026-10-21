@@ -92,70 +92,22 @@ body::before {
 body::after {
   content: '';
   position: fixed;
-  inset: -8% -8% -8% -8%;
+  inset: 0;
   pointer-events: none;
-  z-index: 4;
-  opacity: .20;
+  z-index: 1;
+  opacity: .18;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 120'%3E%3Cpath fill='%23f6c07d' d='M18 60c9-18 22-26 35-26 9 0 16 4 20 10 4-8 13-13 24-13 14 0 30 9 42 26 9-8 20-14 33-17-7 16-9 29-7 40 1 10 6 20 14 30-17-2-32-8-46-18-6 11-15 22-28 32-14-10-24-20-28-31-14 10-29 16-46 18 8-10 12-20 14-30 2-12-1-25-7-39 13 3 24 10 34 18z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 88'%3E%3Cpath fill='%23f6c07d' d='M14 44c6-12 14-17 22-17 6 0 10 3 12 7 3-6 9-9 16-9 9 0 20 6 28 17 7-6 14-10 23-12-4 11-6 20-5 27 1 7 4 14 10 21-11-1-22-6-31-13-4 8-11 15-20 22-9-7-16-14-20-21-9 7-19 11-31 13 6-7 9-14 10-21 1-8-1-16-5-27 9 2 17 6 23 13z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 64'%3E%3Cpath fill='%23f6c07d' d='M11 32c4-8 10-12 16-12 4 0 7 2 9 5 2-4 7-7 12-7 7 0 15 4 21 12 5-4 11-7 17-9-3 8-4 14-4 19 1 5 3 10 8 15-9-1-17-4-24-10-4 6-9 11-15 16-7-5-12-10-15-16-7 6-15 9-24 10 5-5 7-10 8-15 1-6 0-12-4-19 7 2 13 5 17 11z'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 240px 130px, 170px 95px, 125px 68px;
-  background-position: 0 0, 90px 260px, 240px 120px;
-  animation: batsFlyA 26s linear infinite;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'%3E%3Cg fill='%23f7c07c'%3E%3Cpath d='M100 150c20-35 44-47 67-47 16 0 25 8 29 18 8-17 23-26 44-26 26 0 54 16 76 50 16-17 34-28 57-34-12 30-16 54-14 76 2 18 10 36 24 56-31-4-58-15-82-32-9 20-25 40-48 60-25-20-42-40-50-59-26 18-53 29-83 31 14-20 23-39 25-56 3-23-1-48-15-77 24 6 44 18 60 40z'/%3E%3Cpath d='M1140 140c13-22 28-30 43-30 9 0 16 4 20 12 6-10 15-16 29-16 16 0 35 11 49 31 10-10 22-18 37-22-8 19-10 34-9 48 1 11 7 24 17 36-19-3-38-10-53-22-7 13-17 25-31 38-16-13-26-25-31-37-17 11-35 19-54 21 10-12 15-24 17-36 2-14-1-29-9-47 16 4 29 12 39 24z'/%3E%3Cpath d='M280 430c13-22 29-31 45-31 10 0 17 5 21 12 5-10 16-17 31-17 18 0 35 10 50 31 10-11 23-18 39-23-8 19-11 35-9 49 1 12 7 24 17 37-21-3-39-10-56-22-6 13-17 26-32 38-17-13-27-25-32-37-17 12-36 19-56 21 10-13 16-25 18-37 1-14-1-30-10-48 17 4 30 12 41 27z'/%3E%3Cpath d='M1020 520c21-35 43-47 66-47 17 0 26 7 31 18 6-16 21-25 41-25 27 0 56 17 79 49 15-16 35-27 58-33-12 29-16 54-14 76 2 18 10 36 24 55-31-3-59-14-83-31-8 20-24 40-48 60-25-20-42-40-49-59-26 17-53 28-82 31 13-19 21-38 24-55 2-23-3-48-15-77 24 6 44 18 60 38z'/%3E%3Cpath d='M540 720c13-21 27-30 42-30 9 0 15 4 19 11 6-10 16-15 28-15 17 0 34 10 48 31 11-10 23-17 39-21-7 18-9 32-8 45 2 11 8 23 17 35-20-2-38-9-53-20-7 12-17 24-31 36-15-12-26-24-31-35-16 11-34 18-54 20 10-12 15-24 16-35 2-14-1-28-9-45 16 4 30 11 41 23z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  animation: batsDrift 45s linear infinite;
 }
-main::before,
-main::after {
-  content: '';
-  position: fixed;
-  inset: -10% -10% -10% -10%;
-  pointer-events: none;
-  z-index: 4;
+@keyframes batsDrift {
+  0% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(-14px, 8px, 0); }
+  100% { transform: translate3d(0,0,0); }
 }
-main::before {
-  opacity: .14;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 94'%3E%3Cpath fill='%23ffd59a' d='M16 48c7-13 16-19 26-19 6 0 11 3 14 7 3-7 10-10 18-10 10 0 22 7 31 19 6-6 15-11 24-13-5 12-6 22-5 31 1 7 5 15 11 23-13-2-24-6-35-14-5 8-12 17-22 25-11-8-18-16-22-24-10 8-22 12-35 14 6-8 9-16 10-23 1-9 0-19-5-31 10 3 18 7 25 15z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 66'%3E%3Cpath fill='%23ffd59a' d='M11 33c4-8 11-12 16-12 4 0 7 1 9 5 2-4 7-7 12-7 8 0 15 4 22 12 5-4 10-7 17-9-3 7-4 13-4 19 1 5 3 10 8 16-8-1-17-5-24-10-3 6-9 11-15 16-7-5-13-10-16-16-7 5-15 8-24 9 5-5 7-10 8-15 1-6 0-12-4-19 7 2 13 5 17 11z'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 190px 105px, 130px 72px;
-  background-position: 70px 140px, 260px 40px;
-  animation: batsFlyB 34s linear infinite;
-}
-main::after {
-  opacity: .10;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 54'%3E%3Cpath fill='%23ffd59a' d='M9 27c4-7 9-10 14-10 4 0 6 1 8 4 2-4 5-6 10-6 6 0 12 3 18 10 4-3 9-6 14-8-2 6-3 11-3 15 1 4 3 8 7 13-7-1-13-4-20-8-3 5-7 9-12 13-6-4-10-8-13-12-5 4-12 7-19 8 4-5 6-9 6-13 1-5 0-10-3-15 5 1 10 4 13 9z'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 110px 60px;
-  background-position: 0 220px;
-  animation: batsFlyC 18s linear infinite;
-}
-@keyframes batsFlyA {
-  0%   { transform: translate3d(-8vw, 0, 0); }
-  25%  { transform: translate3d(6vw, -3vh, 0); }
-  50%  { transform: translate3d(16vw, 4vh, 0); }
-  75%  { transform: translate3d(26vw, -2vh, 0); }
-  100% { transform: translate3d(38vw, 2vh, 0); }
-}
-@keyframes batsFlyB {
-  0%   { transform: translate3d(18vw, -3vh, 0); }
-  25%  { transform: translate3d(6vw, 4vh, 0); }
-  50%  { transform: translate3d(-8vw, -2vh, 0); }
-  75%  { transform: translate3d(-18vw, 5vh, 0); }
-  100% { transform: translate3d(-28vw, -3vh, 0); }
-}
-@keyframes batsFlyC {
-  0%   { transform: translate3d(-10vw, 4vh, 0) scale(1); }
-  30%  { transform: translate3d(4vw, -2vh, 0) scale(1.04); }
-  60%  { transform: translate3d(18vw, 3vh, 0) scale(.96); }
-  100% { transform: translate3d(30vw, -1vh, 0) scale(1); }
-}
-
 
 main, footer, header, .loader, .chatbot { position: relative; z-index: 2; }
-main { isolation: isolate; }
 :where(a) { text-decoration: none; }
 a { transition: color .25s, background-color .25s, border-color .25s, box-shadow .25s, transform .25s; }
 a:hover { color: var(--h-orange-2); }
@@ -525,7 +477,7 @@ footer {
   color: #ffbe78 !important;
 }
 .loader::before {
-  content: '🦇   🦇   🦇   🦇';
+  content: '🦇   🦇   🦇';
   position: absolute;
   top: calc(50% - 120px);
   left: 50%;
@@ -535,7 +487,7 @@ footer {
   opacity: .5;
 }
 .loader::after {
-  content: '🦇   🦇   🦇';
+  content: '🦇      🦇';
   position: absolute;
   top: calc(50% + 88px);
   left: 50%;
@@ -600,6 +552,69 @@ footer {
   .community-card, .event-card, .map-card { border-radius: 24px !important; }
 }
   
+
+/* HALLOWEEN REFINADO · pocas siluetas volando, sin patrones repetidos */
+body::after, main::before, main::after {
+  content: "" !important;
+  position: fixed;
+  pointer-events: none !important;
+  display: block;
+  width: 70px;
+  height: 35px;
+  inset: auto;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Cpath fill='%23120c17' stroke='%23a16a52' stroke-opacity='.38' stroke-width='1' d='M60 23 Q48 13 38 21 Q18 3 2 16 Q16 23 12 43 Q27 35 40 42 Q50 47 60 54 Q70 47 80 42 Q93 35 108 43 Q104 23 118 16 Q102 3 82 21 Q72 13 60 23Z'/%3E%3C/svg%3E") center / contain no-repeat !important;
+  mix-blend-mode: normal;
+  z-index: 3;
+  opacity: .42;
+  will-change: transform;
+}
+body::after {
+  top: 20%; left: -90px;
+  animation: bat-cross-one 31s linear infinite;
+}
+main::before {
+  top: 68%; right: -100px;
+  width: 44px; height: 24px; opacity: .28;
+  animation: bat-cross-two 39s linear infinite 8s;
+}
+main::after {
+  top: 39%; left: -110px;
+  width: 35px; height: 19px; opacity: .26;
+  animation: bat-cross-three 44s linear infinite 17s;
+}
+@keyframes bat-cross-one {
+  0% { transform: translate3d(0, 0, 0) rotate(-9deg); }
+  28% { transform: translate3d(32vw, 5vh, 0) rotate(6deg); }
+  58% { transform: translate3d(67vw, -4vh, 0) rotate(-5deg); }
+  100% { transform: translate3d(calc(100vw + 190px), 2vh, 0) rotate(8deg); }
+}
+@keyframes bat-cross-two {
+  0% { transform: translate3d(0,0,0) rotate(9deg); }
+  50% { transform: translate3d(-55vw,-5vh,0) rotate(-4deg); }
+  100% { transform: translate3d(calc(-100vw - 190px),3vh,0) rotate(5deg); }
+}
+@keyframes bat-cross-three {
+  0% { transform: translate3d(0,0,0) rotate(-5deg); }
+  50% { transform: translate3d(57vw,6vh,0) rotate(7deg); }
+  100% { transform: translate3d(calc(100vw + 220px),-3vh,0) rotate(-3deg); }
+}
+/* Los adornos estáticos no se repiten sección por sección */
+.section::after, .hero::after { content: none !important; }
+/* Tipografía de lectura más limpia, contrastes seguros */
+h1, h2, h3, .plan-name, .section-title h2,
+.planes-header h2, .schedule h2, .review-card strong { color: #fff3e8 !important; opacity: 1 !important; }
+.section p, .plan-desc, .review-card p, .event-card p, .community-card p { color: #e7d6df !important; }
+.loader::before { content: '🦇       🦇' !important; opacity: .32 !important; }
+.loader::after { content: '🦇' !important; opacity: .2 !important; }
+@media (max-width: 700px) {
+  body::after { width: 42px; height: 22px; opacity: .28; }
+  main::before { width: 29px; height: 16px; opacity: .20; }
+  main::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after, main::before, main::after { display: none !important; animation: none !important; }
+}
+
   </style>
 
   <script type="application/ld+json">
